@@ -1,4 +1,4 @@
-# YoloV5 NPU Multithread
+# YoloV5 NPU Multithread (200 FPS)
 ## YoloV5 for RK3566/68/88 NPU (Rock 5, Orange Pi 5, Radxa Zero 3). <br/>
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)<br/><br/>
 Paper: https://towardsdatascience.com/yolo-v5-is-here-b668ce2a4908<br/><br/>
