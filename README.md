@@ -10,8 +10,8 @@ Special made for the NPU, see [Q-engineering deep learning examples](https://qen
 
 ------------
 
-**This example is not intended to use with a camera.** <br>
-**Usually, cameras run at 30 FPS tops, a rate most NPU models can handle in a single thread.**
+**This example is unsuitable for use with a camera.** <br>
+**Typically, cameras operate at a maximum of 30 FPS, a rate most NPU models can easily handle within a single thread.**
 
 ------------
 
