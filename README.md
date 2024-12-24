@@ -10,6 +10,11 @@ Special made for the NPU, see [Q-engineering deep learning examples](https://qen
 
 ------------
 
+**This example is not intended to use with a camera.** <br>
+**Usually, cameras run at 30 FPS tops, a rate most NPU models can handle in a single thread.**
+
+------------
+
 ## Dependencies.
 To run the application, you have to:
 - OpenCV 64-bit installed.
