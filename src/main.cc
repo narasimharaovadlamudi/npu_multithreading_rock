@@ -36,12 +36,30 @@ int main(int argc, char **argv)
 
     for(int z=0;z<12;z++){
 
-        cv::VideoCapture cap;
-        cap.open("./James.mp4");
-        if (!cap.isOpened()) {
-            cerr << "ERROR: Unable to open the camera" << endl;
-            return 0;
-        }
+        //cv::VideoCapture cap;
+        //cap.open("./James.mp4");
+        //if (!cap.isOpened()) {
+         //   cerr << "ERROR: Unable to open the camera" << endl;
+         //   return 0;
+        //}
+	std::string pipeline =
+            "rtspsrc location=rtsp://besquare:Kernel%40123@192.168.0.109:554/stream1 protocols=udp latency=0 "
+            "! queue "
+            "! decodebin "
+            "! queue "
+            "! videoconvert "
+            "! videoscale "
+            "! video/x-raw,width=640,height=640 "
+            "! queue "
+            "! appsink";
+
+	cv::VideoCapture cap(pipeline, cv::CAP_GSTREAMER);
+
+	if (!cap.isOpened())
+	{
+    		std::cerr << "ERROR: Unable to open hardware accelerated RTSP stream" << std::endl;
+    		return -1;
+	}
 
         struct timeval time;
         gettimeofday(&time, nullptr);
